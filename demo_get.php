@@ -6,9 +6,9 @@
 </head>
 <body>
     <h2>โปรดกรอกชื่อข้อมูลฟอร์ม</h2>
-    <form action="test_get.php" mathod="get">
+    <form action="text_get.php" mathod="get">
         ชื่อวิชา : <input type="text" name="subject"> <br>
-        เว็บไซต์ที่แนะนำ : <input try="text" name="web"> <br>
+        เว็บไซต์ที่แนะนำ : <input type="text" name="web"> <br>
     </form>
 </body>
 </html>
