@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Triangle Area Result</title>
+        <title>TTriangle Area Result</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
