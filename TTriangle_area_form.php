@@ -53,7 +53,7 @@
     <body>
         <div class="container">
             <h1>คำนวณพื้นที่สามเหลี่ยม</h1>
-            <form action="Triangle_area.php" method="POST">
+            <form action="TTriangle_area.php" method="POST">
                 <label for="base">ความยาวฐาน (Base):</label>
                 <input type="number" name="base" id="base" placeholder="กรอกความยาวฐาน" required>
                 

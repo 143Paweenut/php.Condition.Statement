@@ -67,10 +67,10 @@
                         echo "<p>กรุณากรอกตัวเลขที่มากกว่าศูนย์สำหรับทั้งฐานและความสูง</p>";
                     }
                 } else {
-                    echo "<p>ไม่มีข้อมูลที่ส่งมา กรุณากลับไปที่ <a href='Triangle_area_form.php'>ฟอร์ม</a></p>";
+                    echo "<p>ไม่มีข้อมูลที่ส่งมา กรุณากลับไปที่ <a href='TTriangle_area_form.php'>ฟอร์ม</a></p>";
                 }
             ?>
-            <a href="Triangle_area_form.php">กลับไปกรอกข้อมูลใหม่</a>
+            <a href="TTriangle_area_form.php">กลับไปกรอกข้อมูลใหม่</a>
         </div>
     </body>
 </html>
