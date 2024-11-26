@@ -7,25 +7,25 @@
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
+                background-color: #E6E6FA;
                 margin: 0;
                 padding: 20px;
             }
             .container {
                 max-width: 600px;
                 margin: 0 auto;
-                background: #ffffff;
+                background: #F5F5F5;
                 padding: 20px;
                 border-radius: 8px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
                 text-align: center;
             }
             h1 {
-                color: #28a745;
+                color: #330033;
             }
             p {
                 font-size: 18px;
-                color: #333;
+                color: #330033;
             }
             .triangle {
                 margin: 20px auto;
@@ -43,7 +43,7 @@
                 font-weight: bold;
             }
             a:hover {
-                color: #0056b3;
+                color: #339900;
             }
         </style>
     </head>

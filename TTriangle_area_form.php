@@ -3,18 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Triangle Area Form</title>
+        <title>TTriangle Area Form</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f9f9f9;
+                background-color: #E6E6FA;
                 margin: 0;
                 padding: 20px;
             }
             .container {
                 max-width: 500px;
                 margin: 0 auto;
-                background: #ffffff;
+                background: #F5F5F5;
                 padding: 20px;
                 border-radius: 8px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -46,14 +46,14 @@
                 font-size: 16px;
             }
             button:hover {
-                background: #0056b3;
+                background: #FFCC99;
             }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>คำนวณพื้นที่สามเหลี่ยม</h1>
-            <form action="TTriangle_area.php" method="POST">
+            <form action="TTriange_area.php" method="POST">
                 <label for="base">ความยาวฐาน (Base):</label>
                 <input type="number" name="base" id="base" placeholder="กรอกความยาวฐาน" required>
                 
