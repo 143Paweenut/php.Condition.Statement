@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>BMI Result</title>
+        <title>BMI Calculator Form</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -12,72 +12,67 @@
                 padding: 20px;
             }
             .container {
-                max-width: 600px;
+                max-width: 500px;
                 margin: 0 auto;
                 background: #F5F5F5;
                 padding: 20px;
                 border-radius: 8px;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                text-align: center;
             }
             h1 {
-                color: #330033;
-            }
-            p {
-                font-size: 18px;
+                text-align: center;
                 color: #333;
             }
-            a {
-                display: inline-block;
-                margin-top: 20px;
-                text-decoration: none;
-                color: #007BFF;
+            label {
+                display: block;
+                margin-bottom: 8px;
                 font-weight: bold;
             }
-            a:hover {
-                color: #339900;
+            input[type="text"],
+            input[type="number"] {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background: #007BFF;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-size: 16px;
+            }
+            button:hover {
+                background: #339900;
             }
         </style>
     </head>
     <body>
         <div class="container">
-            <h1>ผลการคำนวณค่า BMI</h1>
-            <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $first_name = $_POST['first_name'];
-                    $last_name = $_POST['last_name'];
-                    $age = $_POST['age'];
-                    $weight = $_POST['weight'];
-                    $height_cm = $_POST['height'];
-
-                    // Convert height from cm to meters
-                    $height_m = $height_cm / 100;
-
-                    // Calculate BMI using the formula: BMI = weight(kg) / height(m)^2
-                    $bmi = $weight / ($height_m ** 2);
-
-                    // Determine BMI category
-                    if ($bmi < 18.5) {
-                        $category = "น้ำหนักต่ำกว่าเกณฑ์";
-                    } elseif ($bmi >= 18.5 && $bmi < 24.9) {
-                        $category = "น้ำหนักปกติ";
-                    } elseif ($bmi >= 25 && $bmi < 29.9) {
-                        $category = "น้ำหนักเกิน";
-                    } else {
-                        $category = "โรคอ้วน";
-                    }
-
-                    echo "<p>ชื่อ: <strong>" . htmlspecialchars($first_name) . " " . htmlspecialchars($last_name) . "</strong></p>";
-                    echo "<p>อายุ: <strong>" . htmlspecialchars($age) . " ปี</strong></p>";
-                    echo "<p>น้ำหนัก: <strong>" . htmlspecialchars($weight) . " กิโลกรัม</strong></p>";
-                    echo "<p>ส่วนสูง: <strong>" . htmlspecialchars($height_cm) . " เซนติเมตร</strong></p>";
-                    echo "<p>ค่า BMI: <strong>" . number_format($bmi, 2) . "</strong></p>";
-                    echo "<p>หมวดหมู่: <strong>" . $category . "</strong></p>";
-                } else {
-                    echo "<p>ไม่มีข้อมูลที่ส่งมา กรุณากลับไปที่ <a href='bmi_form.php'>ฟอร์ม</a></p>";
-                }
-            ?>
-            <a href="bmi_form.php">กลับไปกรอกข้อมูลใหม่</a>
+            <h1>คำนวณค่า BMI</h1>
+            <form action="bmi_result.php" method="POST">
+                <label for="first_name">ชื่อ:</label>
+                <input type="text" name="first_name" id="first_name" placeholder="กรอกชื่อ" required>
+                
+                <label for="last_name">นามสกุล:</label>
+                <input type="text" name="last_name" id="last_name" placeholder="กรอกนามสกุล" required>
+                
+                <label for="age">อายุ:</label>
+                <input type="number" name="age" id="age" placeholder="กรอกอายุ" min="0" required>
+                
+                <label for="weight">น้ำหนัก (กิโลกรัม):</label>
+                <input type="number" name="weight" id="weight" placeholder="กรอกน้ำหนัก" min="0" step="any" required>
+                
+                <label for="height">ส่วนสูง (เซนติเมตร):</label>
+                <input type="number" name="height" id="height" placeholder="กรอกส่วนสูง" min="0" step="any" required>
+                
+                <button type="submit">คำนวณค่า BMI</button>
+            </form>
         </div>
     </body>
 </html>
+
